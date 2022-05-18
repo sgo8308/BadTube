@@ -1,6 +1,8 @@
 # BadTube
 
-사이트 URL : http://3.34.52.86/badtube/home.php
+~~사이트 URL : http://3.34.52.86/badtube/home.php
+
+서버 비용 문제로 사용할 때만 서버를 켜서 매번 URL이 바뀌고 있습니다. ^^;
 
 
 ## 개요

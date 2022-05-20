@@ -1,12 +1,12 @@
 <?php
-rmdir_all("../video");
+$dff = disk_free_space("/");
+$dft = disk_total_space("/");
+$diskFreePct = round(($dff / $dft * 100), 2);
 
-$randVal = rand();
-$link =$_POST['youtubeLink'];
-
-$command = "/usr/local/bin/youtube-dl -o /var/www/html/video/video{$randVal} -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]\" {$link}";
-echo "L O A D I N G . . . . . .";
-exec($command,$output, $result);
+$count = 1;
+if($diskFreePct < 10){
+    rmdir_all("../video");
+}
 
 function rmdir_all($delete_path) {
     $dirs = dir($delete_path);
@@ -22,9 +22,15 @@ function rmdir_all($delete_path) {
 
     $dirs->close(); // 최종 디렉토리 삭제 @rmdir($delete_path); }
 
-    }
+}
+
+$link =$_POST['youtubeLink'];
+$videoId = substr($link, -11);
+$command = "/usr/local/bin/yt-dlp -o /var/www/html/video/{$videoId} -f \"bestvideo[ext=mp4]+bestaudio[ext=m4a]\" {$link}";
+exec($command,$output, $result);
+
 ?>
 
 <script>
-    location.href = './home.php?videoId=<?php echo $randVal?>'
+    location.href = './home.php?videoId=<?php echo $videoId?>'
 </script>

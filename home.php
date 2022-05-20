@@ -81,12 +81,33 @@ $videoId = $_GET['videoId'];
     </form>
     <video id="video" controls width="90%" style="margin-top: 10px"  autoplay>
 
-        <source src="../video/video<?php echo $videoId?>.mp4" type="video/mp4">
+        <source src="../video/<?php echo $videoId?>.mp4" type="video/mp4">
         이 문장은 너의 브라우저가 video 태그를 지원하지 않을 때 화면에 표시됩니다!
     </video>
 
-    <div style="border-left: 4px solid black; min-height: 2000px"></div>
+    <div style="border-left: 4px solid black; min-height: 100px"></div>
 </div>
+
+<!--<div>-->
+<!--    영상 목록-->
+<!--    <br><br>-->
+<!--    --><?php
+//
+//    $dir = "../video/";
+//
+//    // Open a directory, and read its contents
+//    if (is_dir($dir)){
+//        if ($dh = opendir($dir)){
+//            while (($file = readdir($dh)) !== false){
+//                if($file !== "." && $file !== "..")
+//                echo $file . "<br>";
+//            }
+//            closedir($dh);
+//        }
+//    }
+//    ?>
+<!--</div>-->
+
 </body>
 </html>
 
@@ -102,9 +123,9 @@ $videoId = $_GET['videoId'];
         }
         else if(e.key == "0"){
             playSpeedDefault();
-        }else if(e.key == "j"){
+        }else if(e.key == ","){
             leftSkip();
-        }else if(e.key == "l"){
+        }else if(e.key == "."){
             rightSkip();
         }
     }

@@ -8,8 +8,8 @@
 사이트 차단 프로그램으로 로컬 컴퓨터에 유튜브를 차단하고, 이 사이트를 이용하여 꼭 필요한 영상만 볼 수 있어요 !
 
 ## 사전 준비
-AWS EC2에 아파치, php를 다운 받고 /var/www/html/badtube/에 badtubeDp.php, home.php를 넣어놉니다. <br>
-[youtube 영상 다운로더](https://github.com/yt-dlp/yt-dlp)를 EC2에 설치합니다. 
+1. AWS EC2에 아파치, php를 다운 받고 /var/www/html/badtube/에 badtubeDp.php, home.php를 넣어놉니다. <br>
+2. [youtube 영상 다운로더](https://github.com/yt-dlp/yt-dlp)를 EC2에 설치합니다. 
 
 ## 사용 방법
 1. http://EC2공인IP/badtube/home.php로 사이트에 접속합니다.

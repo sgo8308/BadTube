@@ -14,7 +14,7 @@
 ## 사용 방법
 1. http://EC2공인IP/badtube/home.php로 사이트에 접속합니다.
 2. 구글에서 유튜브 영상을 검색합니다.<br>
-3. 유튜브 영상 링크(ex. https://www.youtube.com/watch?v=5zvX5qv_HSw)를 복사해서 배드튜브 링크 삽입란에 붙여넣기 합니다.<br>
+3. 유튜브 영상 링크(ex. https://www.youtube.com/watch?v=5zvX5qv_HSw) 를 복사해서 배드튜브 링크 삽입란에 붙여넣기 합니다.<br>
 4. 입력을 클릭한 후 기다립니다.<br>
 5. 기다리다 보면 영상이 나옵니다.<br>
 
